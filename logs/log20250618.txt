@@ -1,0 +1,356 @@
+2025-06-18 00:25:44.194 +01:00 [INF] User profile is available. Using '/Users/lashmyhabib/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-18 00:25:44.226 +01:00 [WRN] Overriding address(es) 'http://localhost:5115'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-06-18 00:25:44.229 +01:00 [INF] Now listening on: http://localhost:5115
+2025-06-18 00:25:44.229 +01:00 [INF] Now listening on: https://localhost:7112
+2025-06-18 00:25:44.229 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-18 00:25:44.229 +01:00 [INF] Hosting environment: Development
+2025-06-18 00:25:44.229 +01:00 [INF] Content root path: /Users/lashmyhabib/repos/pointlessreviews/backend
+2025-06-18 00:26:52.536 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/auth/login - null null
+2025-06-18 00:26:52.581 +01:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-06-18 00:26:52.582 +01:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-06-18 00:26:52.583 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/auth/login - 405 0 null 47.5417ms
+2025-06-18 00:26:52.615 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/favicon.ico - null null
+2025-06-18 00:26:52.617 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/favicon.ico - 404 0 null 1.5943ms
+2025-06-18 00:26:52.617 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7112/favicon.ico, Response status code: 404
+2025-06-18 00:26:52.715 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/apple-touch-icon-precomposed.png - null null
+2025-06-18 00:26:52.716 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/apple-touch-icon-precomposed.png - 404 0 null 1.489ms
+2025-06-18 00:26:52.716 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7112/apple-touch-icon-precomposed.png, Response status code: 404
+2025-06-18 00:26:52.717 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/apple-touch-icon.png - null null
+2025-06-18 00:26:52.717 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/apple-touch-icon.png - 404 0 null 0.0762ms
+2025-06-18 00:26:52.717 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7112/apple-touch-icon.png, Response status code: 404
+2025-06-18 00:26:58.489 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/reviews - null null
+2025-06-18 00:26:58.493 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/reviews - 404 0 null 4.0875ms
+2025-06-18 00:26:58.493 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7112/api/reviews, Response status code: 404
+2025-06-18 00:27:05.261 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/reviews - null null
+2025-06-18 00:27:05.262 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/reviews - 404 0 null 1.0143ms
+2025-06-18 00:27:05.262 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7112/api/reviews, Response status code: 404
+2025-06-18 00:27:28.002 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7112/api/reviews - null null
+2025-06-18 00:27:28.006 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7112/api/reviews - 404 0 null 4.368ms
+2025-06-18 00:27:28.006 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7112/api/reviews, Response status code: 404
+2025-06-18 00:28:53.613 +01:00 [ERR] Unexpected exception in TimingPipeFlusher.FlushAsync.
+System.IO.IOException: The encryption operation failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (14): Bad address
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.WriteSingleChunk[TIOAdapter](ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.WriteAsyncInternal[TIOAdapter](ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at System.Net.Security.SslStream.WriteAsyncInternal[TIOAdapter](ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.PipeWriterHelpers.ConcurrentPipeWriter.FlushAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.PipeWriterHelpers.TimingPipeFlusher.FlushAsync(MinDataRate minRate, Int64 count, IHttpOutputAborter outputAborter, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http2.Http2FrameWriter.WriteGoAwayAsync(Int32 lastStreamId, Http2ErrorCode errorCode)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http2.Http2Connection.UpdateConnectionState()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http2.Http2Connection.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.MoveNext(Thread threadPoolThread)
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+   at System.Threading.Thread.StartCallback()
+--- End of stack trace from previous location ---
+   at System.Net.Security.SslStream.WriteAsyncInternal[TIOAdapter](ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.PipeWriterHelpers.ConcurrentPipeWriter.FlushAsyncAwaited(ValueTask`1 flushTask, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.PipeWriterHelpers.TimingPipeFlusher.TimeFlushAsyncAwaited(ValueTask`1 pipeFlushTask, MinDataRate minRate, IHttpOutputAborter outputAborter, CancellationToken cancellationToken)
+2025-06-18 00:28:53.619 +01:00 [ERR] Unhandled exception while processing 0HNDDUPOEL4NS.
+System.IO.IOException: The encryption operation failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (14): Bad address
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.WriteSingleChunk[TIOAdapter](ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.WriteAsyncInternal[TIOAdapter](ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at System.Net.Security.SslStream.WriteAsyncInternal[TIOAdapter](ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at System.IO.Pipelines.StreamPipeWriter.CompleteAsync(Exception exception)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at System.IO.Pipelines.StreamPipeWriter.CompleteAsync(Exception exception)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.DuplexPipeStreamAdapter`1.DisposeAsync()
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.DuplexPipeStreamAdapter`1.DisposeAsync()
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.ExecutionContextCallback(Object s)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.MoveNext(Thread threadPoolThread)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.MoveNext()
+   at System.Threading.Tasks.AwaitTaskContinuation.RunOrScheduleAction(IAsyncStateMachineBox box, Boolean allowInlining)
+   at System.Threading.Tasks.Task.RunContinuations(Object continuationObject)
+   at System.Threading.Tasks.Task`1.TrySetResult(TResult result)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.HttpConnection.ProcessRequestsAsync[TContext](IHttpApplication`1 httpApplication)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.ExecutionContextCallback(Object s)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.MoveNext(Thread threadPoolThread)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.MoveNext()
+   at System.Threading.Tasks.AwaitTaskContinuation.RunOrScheduleAction(IAsyncStateMachineBox box, Boolean allowInlining)
+   at System.Threading.Tasks.Task.RunContinuations(Object continuationObject)
+   at System.Threading.Tasks.Task`1.TrySetResult(TResult result)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http2.Http2Connection.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.MoveNext(Thread threadPoolThread)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.MoveNext()
+   at System.Threading.Tasks.AwaitTaskContinuation.RunOrScheduleAction(IAsyncStateMachineBox box, Boolean allowInlining)
+   at System.Threading.Tasks.Task.RunContinuations(Object continuationObject)
+   at System.Threading.Tasks.Task`1.TrySetResult(TResult result)
+   at System.Threading.Tasks.UnwrapPromise`1.TrySetFromTask(Task task, Boolean lookForOce)
+   at System.Threading.Tasks.UnwrapPromise`1.Invoke(Task completingTask)
+   at System.Threading.Tasks.Task.RunContinuations(Object continuationObject)
+   at System.Threading.Tasks.Task`1.TrySetResult(TResult result)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http2.Http2FrameWriter.WriteToOutputPipe()
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.ExecutionContextCallback(Object s)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.MoveNext(Thread threadPoolThread)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.MoveNext()
+   at System.Threading.ThreadPool.<>c.<.cctor>b__52_0(Object state)
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+   at System.Threading.Thread.StartCallback()
+--- End of stack trace from previous location ---
+   at System.Net.Security.SslStream.WriteAsyncInternal[TIOAdapter](ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.IO.Pipelines.StreamPipeWriter.CompleteAsync(Exception exception)
+   at System.IO.Pipelines.StreamPipeWriter.CompleteAsync(Exception exception)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.DuplexPipeStreamAdapter`1.DisposeAsync()
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.KestrelConnection`1.ExecuteAsync()
+2025-06-18 00:35:16.747 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/review/?page=1&pageSize=20 - null null
+2025-06-18 00:35:16.762 +01:00 [INF] CORS policy execution successful.
+2025-06-18 00:35:16.765 +01:00 [INF] Executing endpoint 'backend.Controllers.ReviewController.GetReviews (backend)'
+2025-06-18 00:35:16.811 +01:00 [INF] Route matched with {action = "GetReviews", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetReviews(Int32, Int32) on controller backend.Controllers.ReviewController (backend).
+2025-06-18 00:35:17.671 +01:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Reviews" AS r
+2025-06-18 00:35:17.800 +01:00 [INF] Executed DbCommand (32ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT r0."Id", r0."CreatedAt", r0."Description", r0."ImageUrl", r0."Rating", r0."Title", r0."UserId", a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", r1."Id", r1."ReactionType", r1."ReviewId", r1."UserId"
+FROM (
+    SELECT r."Id", r."CreatedAt", r."Description", r."ImageUrl", r."Rating", r."Title", r."UserId"
+    FROM "Reviews" AS r
+    ORDER BY r."CreatedAt" DESC
+    LIMIT @__p_1 OFFSET @__p_0
+) AS r0
+INNER JOIN "AspNetUsers" AS a ON r0."UserId" = a."Id"
+LEFT JOIN "Reactions" AS r1 ON r0."Id" = r1."ReviewId"
+ORDER BY r0."CreatedAt" DESC, r0."Id", a."Id"
+2025-06-18 00:35:17.858 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Collections.Generic.IEnumerable`1[[backend.DTOs.ReviewResponseDTO, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`6[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-18 00:35:17.902 +01:00 [INF] Executed action backend.Controllers.ReviewController.GetReviews (backend) in 1090.0764ms
+2025-06-18 00:35:17.902 +01:00 [INF] Executed endpoint 'backend.Controllers.ReviewController.GetReviews (backend)'
+2025-06-18 00:35:17.905 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/review/?page=1&pageSize=20 - 200 null application/json; charset=utf-8 1158.1034ms
+2025-06-18 00:35:31.770 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/auth/login - null 0
+2025-06-18 00:35:31.775 +01:00 [INF] CORS policy execution successful.
+2025-06-18 00:35:31.778 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/auth/login - 204 null null 8.1907ms
+2025-06-18 00:35:31.781 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7112/api/auth/login - application/json 45
+2025-06-18 00:35:31.781 +01:00 [INF] CORS policy execution successful.
+2025-06-18 00:35:31.782 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-06-18 00:35:31.789 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(backend.DTOs.UserDTO) on controller backend.Controllers.AuthController (backend).
+2025-06-18 00:35:31.868 +01:00 [INF] Executed DbCommand (19ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-06-18 00:35:31.925 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[backend.Models.User, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-18 00:35:31.930 +01:00 [INF] Executed action backend.Controllers.AuthController.Login (backend) in 140.7119ms
+2025-06-18 00:35:31.930 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-06-18 00:35:31.930 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7112/api/auth/login - 200 null application/json; charset=utf-8 149.4165ms
+2025-06-18 00:35:31.952 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/review/?page=1&pageSize=20 - null null
+2025-06-18 00:35:31.952 +01:00 [INF] CORS policy execution successful.
+2025-06-18 00:35:31.952 +01:00 [INF] Executing endpoint 'backend.Controllers.ReviewController.GetReviews (backend)'
+2025-06-18 00:35:31.952 +01:00 [INF] Route matched with {action = "GetReviews", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetReviews(Int32, Int32) on controller backend.Controllers.ReviewController (backend).
+2025-06-18 00:35:32.004 +01:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Reviews" AS r
+2025-06-18 00:35:32.022 +01:00 [INF] Executed DbCommand (16ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT r0."Id", r0."CreatedAt", r0."Description", r0."ImageUrl", r0."Rating", r0."Title", r0."UserId", a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", r1."Id", r1."ReactionType", r1."ReviewId", r1."UserId"
+FROM (
+    SELECT r."Id", r."CreatedAt", r."Description", r."ImageUrl", r."Rating", r."Title", r."UserId"
+    FROM "Reviews" AS r
+    ORDER BY r."CreatedAt" DESC
+    LIMIT @__p_1 OFFSET @__p_0
+) AS r0
+INNER JOIN "AspNetUsers" AS a ON r0."UserId" = a."Id"
+LEFT JOIN "Reactions" AS r1 ON r0."Id" = r1."ReviewId"
+ORDER BY r0."CreatedAt" DESC, r0."Id", a."Id"
+2025-06-18 00:35:32.023 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Collections.Generic.IEnumerable`1[[backend.DTOs.ReviewResponseDTO, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`6[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-18 00:35:32.023 +01:00 [INF] Executed action backend.Controllers.ReviewController.GetReviews (backend) in 70.472ms
+2025-06-18 00:35:32.023 +01:00 [INF] Executed endpoint 'backend.Controllers.ReviewController.GetReviews (backend)'
+2025-06-18 00:35:32.023 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/review/?page=1&pageSize=20 - 200 null application/json; charset=utf-8 71.4189ms
+2025-06-18 00:35:41.515 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/review - null 0
+2025-06-18 00:35:41.516 +01:00 [INF] CORS policy execution successful.
+2025-06-18 00:35:41.516 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/review - 204 null null 0.5975ms
+2025-06-18 00:35:41.517 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7112/api/review - multipart/form-data; boundary=----WebKitFormBoundaryKWR09zmo2wCh2OAh 336
+2025-06-18 00:35:41.517 +01:00 [INF] CORS policy execution successful.
+2025-06-18 00:35:41.543 +01:00 [INF] Executing endpoint 'backend.Controllers.ReviewController.CreateReview (backend)'
+2025-06-18 00:35:41.545 +01:00 [INF] Route matched with {action = "CreateReview", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateReview(backend.DTOs.ReviewDTO) on controller backend.Controllers.ReviewController (backend).
+2025-06-18 00:35:41.586 +01:00 [INF] Executed DbCommand (25ms) [Parameters=[@__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__p_0
+LIMIT 1
+2025-06-18 00:35:41.658 +01:00 [INF] Executed DbCommand (25ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?' (DbType = Int32), @p4='?', @p5='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Reviews" ("CreatedAt", "Description", "ImageUrl", "Rating", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING "Id";
+2025-06-18 00:35:41.668 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.DTOs.ReviewResponseDTO'.
+2025-06-18 00:35:41.668 +01:00 [INF] Executed action backend.Controllers.ReviewController.CreateReview (backend) in 122.3505ms
+2025-06-18 00:35:41.668 +01:00 [INF] Executed endpoint 'backend.Controllers.ReviewController.CreateReview (backend)'
+2025-06-18 00:35:41.668 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7112/api/review - 200 null application/json; charset=utf-8 150.857ms
+2025-06-18 00:35:41.754 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/review/?page=1&pageSize=20 - null null
+2025-06-18 00:35:41.754 +01:00 [INF] CORS policy execution successful.
+2025-06-18 00:35:41.755 +01:00 [INF] Executing endpoint 'backend.Controllers.ReviewController.GetReviews (backend)'
+2025-06-18 00:35:41.755 +01:00 [INF] Route matched with {action = "GetReviews", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetReviews(Int32, Int32) on controller backend.Controllers.ReviewController (backend).
+2025-06-18 00:35:41.773 +01:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Reviews" AS r
+2025-06-18 00:35:41.789 +01:00 [INF] Executed DbCommand (16ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT r0."Id", r0."CreatedAt", r0."Description", r0."ImageUrl", r0."Rating", r0."Title", r0."UserId", a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", r1."Id", r1."ReactionType", r1."ReviewId", r1."UserId"
+FROM (
+    SELECT r."Id", r."CreatedAt", r."Description", r."ImageUrl", r."Rating", r."Title", r."UserId"
+    FROM "Reviews" AS r
+    ORDER BY r."CreatedAt" DESC
+    LIMIT @__p_1 OFFSET @__p_0
+) AS r0
+INNER JOIN "AspNetUsers" AS a ON r0."UserId" = a."Id"
+LEFT JOIN "Reactions" AS r1 ON r0."Id" = r1."ReviewId"
+ORDER BY r0."CreatedAt" DESC, r0."Id", a."Id"
+2025-06-18 00:35:41.790 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Collections.Generic.IEnumerable`1[[backend.DTOs.ReviewResponseDTO, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`6[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-18 00:35:41.790 +01:00 [INF] Executed action backend.Controllers.ReviewController.GetReviews (backend) in 35.2532ms
+2025-06-18 00:35:41.790 +01:00 [INF] Executed endpoint 'backend.Controllers.ReviewController.GetReviews (backend)'
+2025-06-18 00:35:41.790 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/review/?page=1&pageSize=20 - 200 null application/json; charset=utf-8 35.5693ms
+2025-06-18 00:35:43.440 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/review/?page=1&pageSize=20 - null null
+2025-06-18 00:35:43.440 +01:00 [INF] CORS policy execution successful.
+2025-06-18 00:35:43.440 +01:00 [INF] Executing endpoint 'backend.Controllers.ReviewController.GetReviews (backend)'
+2025-06-18 00:35:43.440 +01:00 [INF] Route matched with {action = "GetReviews", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetReviews(Int32, Int32) on controller backend.Controllers.ReviewController (backend).
+2025-06-18 00:35:43.468 +01:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Reviews" AS r
+2025-06-18 00:35:43.487 +01:00 [INF] Executed DbCommand (18ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT r0."Id", r0."CreatedAt", r0."Description", r0."ImageUrl", r0."Rating", r0."Title", r0."UserId", a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", r1."Id", r1."ReactionType", r1."ReviewId", r1."UserId"
+FROM (
+    SELECT r."Id", r."CreatedAt", r."Description", r."ImageUrl", r."Rating", r."Title", r."UserId"
+    FROM "Reviews" AS r
+    ORDER BY r."CreatedAt" DESC
+    LIMIT @__p_1 OFFSET @__p_0
+) AS r0
+INNER JOIN "AspNetUsers" AS a ON r0."UserId" = a."Id"
+LEFT JOIN "Reactions" AS r1 ON r0."Id" = r1."ReviewId"
+ORDER BY r0."CreatedAt" DESC, r0."Id", a."Id"
+2025-06-18 00:35:43.488 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Collections.Generic.IEnumerable`1[[backend.DTOs.ReviewResponseDTO, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`6[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-18 00:35:43.489 +01:00 [INF] Executed action backend.Controllers.ReviewController.GetReviews (backend) in 48.3469ms
+2025-06-18 00:35:43.489 +01:00 [INF] Executed endpoint 'backend.Controllers.ReviewController.GetReviews (backend)'
+2025-06-18 00:35:43.489 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/review/?page=1&pageSize=20 - 200 null application/json; charset=utf-8 49.3934ms
+2025-06-18 00:36:03.223 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/reviews - null null
+2025-06-18 00:36:03.225 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/reviews - 404 0 null 2.6452ms
+2025-06-18 00:36:03.226 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7112/api/reviews, Response status code: 404
+2025-06-18 00:36:19.844 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7112/api/reviews - null null
+2025-06-18 00:36:19.846 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7112/api/reviews - 404 0 null 1.9277ms
+2025-06-18 00:36:19.846 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7112/api/reviews, Response status code: 404
+2025-06-18 00:37:11.526 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7112/api/review - null null
+2025-06-18 00:37:11.529 +01:00 [INF] Executing endpoint 'backend.Controllers.ReviewController.GetReviews (backend)'
+2025-06-18 00:37:11.531 +01:00 [INF] Route matched with {action = "GetReviews", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetReviews(Int32, Int32) on controller backend.Controllers.ReviewController (backend).
+2025-06-18 00:37:11.555 +01:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Reviews" AS r
+2025-06-18 00:37:11.574 +01:00 [INF] Executed DbCommand (18ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT r0."Id", r0."CreatedAt", r0."Description", r0."ImageUrl", r0."Rating", r0."Title", r0."UserId", a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", r1."Id", r1."ReactionType", r1."ReviewId", r1."UserId"
+FROM (
+    SELECT r."Id", r."CreatedAt", r."Description", r."ImageUrl", r."Rating", r."Title", r."UserId"
+    FROM "Reviews" AS r
+    ORDER BY r."CreatedAt" DESC
+    LIMIT @__p_1 OFFSET @__p_0
+) AS r0
+INNER JOIN "AspNetUsers" AS a ON r0."UserId" = a."Id"
+LEFT JOIN "Reactions" AS r1 ON r0."Id" = r1."ReviewId"
+ORDER BY r0."CreatedAt" DESC, r0."Id", a."Id"
+2025-06-18 00:37:11.576 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Collections.Generic.IEnumerable`1[[backend.DTOs.ReviewResponseDTO, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`6[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-18 00:37:11.579 +01:00 [INF] Executed action backend.Controllers.ReviewController.GetReviews (backend) in 48.0122ms
+2025-06-18 00:37:11.579 +01:00 [INF] Executed endpoint 'backend.Controllers.ReviewController.GetReviews (backend)'
+2025-06-18 00:37:11.579 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7112/api/review - 200 null application/json; charset=utf-8 53.2535ms
+2025-06-18 00:37:21.477 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/review - null null
+2025-06-18 00:37:21.478 +01:00 [INF] Executing endpoint 'backend.Controllers.ReviewController.GetReviews (backend)'
+2025-06-18 00:37:21.479 +01:00 [INF] Route matched with {action = "GetReviews", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetReviews(Int32, Int32) on controller backend.Controllers.ReviewController (backend).
+2025-06-18 00:37:21.503 +01:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Reviews" AS r
+2025-06-18 00:37:21.525 +01:00 [INF] Executed DbCommand (17ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT r0."Id", r0."CreatedAt", r0."Description", r0."ImageUrl", r0."Rating", r0."Title", r0."UserId", a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", r1."Id", r1."ReactionType", r1."ReviewId", r1."UserId"
+FROM (
+    SELECT r."Id", r."CreatedAt", r."Description", r."ImageUrl", r."Rating", r."Title", r."UserId"
+    FROM "Reviews" AS r
+    ORDER BY r."CreatedAt" DESC
+    LIMIT @__p_1 OFFSET @__p_0
+) AS r0
+INNER JOIN "AspNetUsers" AS a ON r0."UserId" = a."Id"
+LEFT JOIN "Reactions" AS r1 ON r0."Id" = r1."ReviewId"
+ORDER BY r0."CreatedAt" DESC, r0."Id", a."Id"
+2025-06-18 00:37:21.532 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Collections.Generic.IEnumerable`1[[backend.DTOs.ReviewResponseDTO, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`6[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-18 00:37:21.532 +01:00 [INF] Executed action backend.Controllers.ReviewController.GetReviews (backend) in 53.6321ms
+2025-06-18 00:37:21.532 +01:00 [INF] Executed endpoint 'backend.Controllers.ReviewController.GetReviews (backend)'
+2025-06-18 00:37:21.532 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/review - 200 null application/json; charset=utf-8 56.085ms
+2025-06-18 00:38:39.138 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/apple-touch-icon-precomposed.png - null null
+2025-06-18 00:38:39.138 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/favicon.ico - null null
+2025-06-18 00:38:39.138 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/apple-touch-icon.png - null null
+2025-06-18 00:38:39.140 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/apple-touch-icon.png - 404 0 null 1.9541ms
+2025-06-18 00:38:39.140 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/favicon.ico - 404 0 null 2.2283ms
+2025-06-18 00:38:39.140 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7112/apple-touch-icon.png, Response status code: 404
+2025-06-18 00:38:39.140 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7112/favicon.ico, Response status code: 404
+2025-06-18 00:38:39.141 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/apple-touch-icon-precomposed.png - 404 0 null 2.5753ms
+2025-06-18 00:38:39.142 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7112/apple-touch-icon-precomposed.png, Response status code: 404
+2025-06-18 01:33:09.321 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/review/?page=1&pageSize=20 - null null
+2025-06-18 01:33:09.326 +01:00 [INF] CORS policy execution successful.
+2025-06-18 01:33:09.330 +01:00 [INF] Executing endpoint 'backend.Controllers.ReviewController.GetReviews (backend)'
+2025-06-18 01:33:09.333 +01:00 [INF] Route matched with {action = "GetReviews", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetReviews(Int32, Int32) on controller backend.Controllers.ReviewController (backend).
+2025-06-18 01:33:09.521 +01:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Reviews" AS r
+2025-06-18 01:33:09.541 +01:00 [INF] Executed DbCommand (16ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT r0."Id", r0."CreatedAt", r0."Description", r0."ImageUrl", r0."Rating", r0."Title", r0."UserId", a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", r1."Id", r1."ReactionType", r1."ReviewId", r1."UserId"
+FROM (
+    SELECT r."Id", r."CreatedAt", r."Description", r."ImageUrl", r."Rating", r."Title", r."UserId"
+    FROM "Reviews" AS r
+    ORDER BY r."CreatedAt" DESC
+    LIMIT @__p_1 OFFSET @__p_0
+) AS r0
+INNER JOIN "AspNetUsers" AS a ON r0."UserId" = a."Id"
+LEFT JOIN "Reactions" AS r1 ON r0."Id" = r1."ReviewId"
+ORDER BY r0."CreatedAt" DESC, r0."Id", a."Id"
+2025-06-18 01:33:09.546 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Collections.Generic.IEnumerable`1[[backend.DTOs.ReviewResponseDTO, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`6[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-18 01:33:09.548 +01:00 [INF] Executed action backend.Controllers.ReviewController.GetReviews (backend) in 215.026ms
+2025-06-18 01:33:09.548 +01:00 [INF] Executed endpoint 'backend.Controllers.ReviewController.GetReviews (backend)'
+2025-06-18 01:33:09.549 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/review/?page=1&pageSize=20 - 200 null application/json; charset=utf-8 227.7479ms
+2025-06-18 01:33:12.536 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/review - null null
+2025-06-18 01:33:12.537 +01:00 [INF] Executing endpoint 'backend.Controllers.ReviewController.GetReviews (backend)'
+2025-06-18 01:33:12.537 +01:00 [INF] Route matched with {action = "GetReviews", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetReviews(Int32, Int32) on controller backend.Controllers.ReviewController (backend).
+2025-06-18 01:33:12.561 +01:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Reviews" AS r
+2025-06-18 01:33:12.577 +01:00 [INF] Executed DbCommand (15ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT r0."Id", r0."CreatedAt", r0."Description", r0."ImageUrl", r0."Rating", r0."Title", r0."UserId", a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName", r1."Id", r1."ReactionType", r1."ReviewId", r1."UserId"
+FROM (
+    SELECT r."Id", r."CreatedAt", r."Description", r."ImageUrl", r."Rating", r."Title", r."UserId"
+    FROM "Reviews" AS r
+    ORDER BY r."CreatedAt" DESC
+    LIMIT @__p_1 OFFSET @__p_0
+) AS r0
+INNER JOIN "AspNetUsers" AS a ON r0."UserId" = a."Id"
+LEFT JOIN "Reactions" AS r1 ON r0."Id" = r1."ReviewId"
+ORDER BY r0."CreatedAt" DESC, r0."Id", a."Id"
+2025-06-18 01:33:12.578 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`2[[System.Collections.Generic.IEnumerable`1[[backend.DTOs.ReviewResponseDTO, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`6[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-18 01:33:12.579 +01:00 [INF] Executed action backend.Controllers.ReviewController.GetReviews (backend) in 41.976ms
+2025-06-18 01:33:12.579 +01:00 [INF] Executed endpoint 'backend.Controllers.ReviewController.GetReviews (backend)'
+2025-06-18 01:33:12.579 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/review - 200 null application/json; charset=utf-8 42.6581ms
+2025-06-18 02:15:12.080 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/apple-touch-icon.png - null null
+2025-06-18 02:15:12.080 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/apple-touch-icon-precomposed.png - null null
+2025-06-18 02:15:12.080 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7112/favicon.ico - null null
+2025-06-18 02:15:12.082 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/favicon.ico - 404 0 null 1.494ms
+2025-06-18 02:15:12.082 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/apple-touch-icon-precomposed.png - 404 0 null 1.5199ms
+2025-06-18 02:15:12.082 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7112/apple-touch-icon.png - 404 0 null 2.1778ms
+2025-06-18 02:15:12.082 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7112/favicon.ico, Response status code: 404
+2025-06-18 02:15:12.082 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7112/apple-touch-icon.png, Response status code: 404
+2025-06-18 02:15:12.082 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7112/apple-touch-icon-precomposed.png, Response status code: 404

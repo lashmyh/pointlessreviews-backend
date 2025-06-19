@@ -137,7 +137,7 @@ namespace backend.Controllers
                 return Ok(response);
             } catch(Exception ex) {
                 _logger.LogError(ex, "An error occurred while retrieving reviews. Page: {Page}, PageSize: {PageSize}", page, pageSize);
-                return StatusCode(500, "An unexpected error occurred while fetching reviews.");
+                return StatusCode(500, new { error = ex.Message, detail = ex.StackTrace });
             }
         }
 

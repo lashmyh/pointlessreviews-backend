@@ -493,3 +493,4 @@
 /Users/lashmyhabib/repos/pointlessreviews/backend/obj/Debug/net9.0/backend.pdb
 /Users/lashmyhabib/repos/pointlessreviews/backend/obj/Debug/net9.0/backend.genruntimeconfig.cache
 /Users/lashmyhabib/repos/pointlessreviews/backend/obj/Debug/net9.0/ref/backend.dll
+/Users/lashmyhabib/repos/pointlessreviews/backend/obj/Debug/net9.0/backend.sourcelink.json
