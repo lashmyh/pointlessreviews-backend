@@ -23,21 +23,6 @@ var jwtKey = builder.Configuration["Jwt:Key"]
     ?? throw new InvalidOperationException("JWT Key is not configured in appsettings.json or environment variables.");
 
 
-builder.Services.AddHttpsRedirection(options =>
-{
-    options.HttpsPort = 7112;  // 
-});
-
-builder.WebHost.ConfigureKestrel(options =>
-{
-    options.ListenLocalhost(5115);   // HTTP
-    options.ListenLocalhost(7112, listenOptions =>   // HTTPS
-    {
-        listenOptions.UseHttps(); // enable HTTPS
-    });
-});
-
-
 // clear existing authentication configuration
 builder.Services.AddAuthentication(options =>
 {
@@ -123,7 +108,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowFrontend", policy =>
     {
         policy
-            .WithOrigins("http://localhost:5173") 
+            .WithOrigins("http://localhost:5173",
+                "https://white-rock-02348311e.1.azurestaticapps.net") 
             .AllowAnyMethod()
             .AllowAnyHeader()
             .AllowCredentials(); 
